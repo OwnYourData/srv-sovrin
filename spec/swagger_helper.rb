@@ -18,7 +18,7 @@ RSpec.configure do |config|
       info: {
         title: 'Sovrin Service API',
         version: 'v1',
-        "description": "As part of the OwnYourData Notary Service the Sovrin Service API allows to independently manage references to documents throughout the lifecylce.\n \n Further information:\n - details about required inputs to run the serice: https://github.com/OwnYourData/srv-sovrin\n - view other [OwnYourData Service API's](https://api-docs.ownyourdata.eu)",
+        "description": "As part of the [OwnYourData Notary Service](https://notary.ownyourdata.eu) the Sovrin Service API allows to independently manage references to documents throughout the lifecylce.\n \n Further information:\n - details about required inputs to run the serice: https://github.com/OwnYourData/srv-sovrin\n - view other [OwnYourData Service API's](https://api-docs.ownyourdata.eu)",
         "contact": {
           "email": "office@ownyourdata.eu"
         },
