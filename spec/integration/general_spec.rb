@@ -20,4 +20,23 @@ describe 'Sovrin Service API' do
 			end
 		end
 	end
+	path '/api/did/create' do
+		post "write DID" do
+			tags 'General'
+			produces 'application/json'
+			consumes 'application/json'
+			parameter name: :input, in: :body
+			response '200', 'success' do
+				let(:input) { { "did":"123", "seed": "456", "verkey": "789", "hash": "0ab" } }
+				schema type: :object,
+					properties: {
+						"wallet-key": { type: :string },
+						"export-key": { type: :string },
+						wallet: { type: :string }
+					},
+				required: [ 'wallet-key', 'export-key', 'wallet' ]
+				run_test!
+			end
+		end
+	end
 end

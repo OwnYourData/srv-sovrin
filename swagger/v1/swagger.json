@@ -47,14 +47,50 @@
           }
         }
       }
-    }
-  },
-  "securityDefinitions": {
-    "Bearer": {
-      "description": "Authorization token",
-      "type": "apiKey",
-      "name": "Authorization",
-      "in": "header"
+    },
+    "/api/did/create": {
+      "post": {
+        "summary": "write DID",
+        "tags": [
+          "General"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "input",
+            "in": "body"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "wallet-key": {
+                  "type": "string"
+                },
+                "export-key": {
+                  "type": "string"
+                },
+                "wallet": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "wallet-key",
+                "export-key",
+                "wallet"
+              ]
+            }
+          }
+        }
+      }
     }
   }
 }

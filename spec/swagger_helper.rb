@@ -27,15 +27,7 @@ RSpec.configure do |config|
           "url": "https://opensource.org/licenses/MIT"
         }
       },
-      paths: {},
-      securityDefinitions: {
-        Bearer: {
-          description: "Authorization token",
-          type: :apiKey,
-          name: 'Authorization',
-          in: :header
-        }
-      }
+      paths: {}
     }
   }
 end
